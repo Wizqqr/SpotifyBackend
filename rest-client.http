@@ -1,0 +1,16 @@
+GET http://localhost:3000
+
+### GET ALL SONGS
+GET http://localhost:3000/songs
+
+### GET SONG BY ID
+GET http://localhost:3000/songs/1
+
+### POST SONG
+POST http://localhost:3000/songs
+
+### CHANGE SONG
+PUT http://localhost:3000/songs/1
+
+### DELETE SONG
+DELETE http://localhost:3000/songs/1

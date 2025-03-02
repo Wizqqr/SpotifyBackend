@@ -4,7 +4,7 @@ GET http://localhost:3000
 GET http://localhost:3000/songs
 
 ### GET SONG BY ID
-GET http://localhost:3000/songs/1
+GET http://localhost:3000/songs/1123s
 
 ### POST SONG
 POST http://localhost:3000/songs

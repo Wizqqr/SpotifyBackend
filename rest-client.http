@@ -1,13 +1,25 @@
 GET http://localhost:3000
-
+### TEST
+POST http://localhost:3000
 ### GET ALL SONGS
 GET http://localhost:3000/songs
 
 ### GET SONG BY ID
-GET http://localhost:3000/songs/1123s
+GET http://localhost:3000/songs/1123
 
 ### POST SONG
 POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title": "CR7",
+    "artists": [
+        "cr7"
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": "DSADASDDSA"
+}
 
 ### CHANGE SONG
 PUT http://localhost:3000/songs/1

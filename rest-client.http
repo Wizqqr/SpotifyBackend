@@ -5,16 +5,16 @@ POST http://localhost:3000
 GET http://localhost:3000/songs
 
 ### GET SONG BY ID
-GET http://localhost:3000/songs/1123
+GET http://localhost:3000/songs/3
 
 ### POST SONG
 POST http://localhost:3000/songs
 Content-Type: application/json
 
 {
-    "title": "CR7",
+    "title": "LM10",
     "artists": [
-        "cr7"
+        "LM10"
     ],
     "releasedDate": "2024-04-04",
     "duration": "02:34",
@@ -22,7 +22,17 @@ Content-Type: application/json
 }
 
 ### CHANGE SONG
-PUT http://localhost:3000/songs/1
+PUT http://localhost:3000/songs/5
+Content-Type: application/json
 
+{
+    "title": "CR7",
+    "artists": [
+        "CR7"
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": "DSADASDDSA"
+}
 ### DELETE SONG
-DELETE http://localhost:3000/songs/1
+DELETE http://localhost:3000/songs/2

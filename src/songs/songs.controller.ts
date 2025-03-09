@@ -2,6 +2,8 @@ import { Body, Controller, Delete, Get, HttpException, HttpStatus, Inject, Param
 import { SongsService } from './songs.service';
 import { Connection } from 'src/common/types/types';
 import { CreateSongDTO } from './dto/create-song-dto';
+import { UpdateSongDTO } from './dto/update-song-dto';
+import { DeleteResult, UpdateResult } from 'typeorm';
 @Controller({path: 'songs', scope: Scope.REQUEST})
 export class SongsController {
     constructor(private songsService: SongsService){}
@@ -32,29 +34,27 @@ export class SongsController {
 
 
     @Get(':id')
-    findOne(   
-        @Param('id', new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE}),
-    )
-    id: Number,
+    findOne(
+        @Param('id', new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_FOUND })) id: number,
     ) {
-        return `fetch song on the based on id ${typeof id}`
+        return this.songsService.findOne(id);
     }
+    
 
 
     @Put(':id')
-    update() {
-        return 'change song by id endpoint'
+    update(
+        @Param('id', ParseIntPipe) id: number,
+        @Body() updateSongDTO: UpdateSongDTO
+    ) : Promise<UpdateResult> {
+        return this.songsService.update(id, updateSongDTO)
     }
 
 
     @Delete(':id')
-    delete() {
-        return 'delete song by id endpoint'
-    }
-
-
-    @Post()
-    createSong() {
-        return 'create a song by id endpoint'
+    delete(
+        @Param('id', ParseIntPipe) id: number
+    ) : Promise<DeleteResult> {
+        return this.songsService.remove(id);
     }
 }

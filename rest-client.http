@@ -4,6 +4,23 @@ POST http://localhost:3000
 ### GET ALL SONGS
 GET http://localhost:3000/songs
 
+
+
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=2
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=1&limit=3
+
+
+
+
+
+
+
+
+
 ### GET SONG BY ID
 GET http://localhost:3000/songs/3
 
@@ -12,7 +29,7 @@ POST http://localhost:3000/songs
 Content-Type: application/json
 
 {
-    "title": "LM10",
+    "title": "RG11",
     "artists": [
         "LM10"
     ],

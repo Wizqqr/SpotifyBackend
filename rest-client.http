@@ -31,7 +31,7 @@ Content-Type: application/json
 {
     "title": "RG11",
     "artists": [
-        "LM10"
+        "asd'"
     ],
     "releasedDate": "2024-04-04",
     "duration": "02:34",

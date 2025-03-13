@@ -8,6 +8,8 @@ import { DevConfigService } from './common/providers/DevConfigService';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { Song } from './songs/song.entity';
+import { User } from './user/user.entity';
+import { Artist } from './artist/artist.entity';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -21,7 +23,7 @@ const proConfig = { port: 400};
         port: 5432,
         username: 'postgres',
         password: 'Aziret7bklass',
-        entities: [Song],
+        entities: [Song, User, Artist],
         synchronize: true,
       }
     ),

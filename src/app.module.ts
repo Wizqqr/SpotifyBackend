@@ -8,8 +8,10 @@ import { DevConfigService } from './common/providers/DevConfigService';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { Song } from './songs/song.entity';
-import { User } from './user/user.entity';
+import { User } from './users/users.entity';
 import { Artist } from './artist/artist.entity';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -18,7 +20,7 @@ const proConfig = { port: 400};
     TypeOrmModule.forRoot(
       {
         type: 'postgres',
-        database: 'spotifyNestjs',
+        database: 'spotifynestjs01',
         host: 'localhost',
         port: 5432,
         username: 'postgres',
@@ -27,7 +29,9 @@ const proConfig = { port: 400};
         synchronize: true,
       }
     ),
-    SongsModule
+    SongsModule,
+    AuthModule,
+    UsersModule
   ],
   controllers: [AppController],
   providers: [

@@ -1,4 +1,14 @@
-GET http://localhost:3000
+// sign up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "firstName": "ronaldo",
+    "lastName": "cristiano",
+    "email": "123cr1231231237123@gmail.com",
+    "password": "12312345"
+}
+
 ### TEST
 POST http://localhost:3000
 ### GET ALL SONGS
@@ -37,6 +47,7 @@ Content-Type: application/json
     "duration": "02:34",
     "lyrics": "DSADASDDSA"
 }
+
 
 ### CHANGE SONG
 PUT http://localhost:3000/songs/5

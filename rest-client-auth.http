@@ -32,3 +32,19 @@ GET http://localhost:3000/albums/3
 
 ### get albums
 GET http://localhost:3000/albums
+
+
+### change album
+PUT http://localhost:3000/albums/6
+Content-Type: application/json
+
+{
+    "title": "cr7isthebest",
+    "songs":[
+        0
+    ]
+}
+
+
+### delete album
+DELETE http://localhost:3000/albums/7

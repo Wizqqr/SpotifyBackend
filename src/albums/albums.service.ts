@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Album } from './album.entity';
-import { Repository } from 'typeorm';
+import { Repository, UpdateResult } from 'typeorm';
 import { Song } from 'src/songs/song.entity';
 import { CreateAlbumDTO } from './dto/create-album-dto';
 import { IPaginationOptions, paginate, Pagination } from 'nestjs-typeorm-paginate';
+import { UpdateAlbumDTO } from './dto/update-album-dto';
 
 @Injectable()
 export class AlbumsService {
@@ -19,7 +20,6 @@ export class AlbumsService {
         const album = new Album();
         album.title = albumDTO.title;
 
-        // Загружаем все указанные песни по id
         if (albumDTO.songs && albumDTO.songs.length) {
             const songs = await this.songRepository.findByIds(albumDTO.songs);
             album.songs = songs;
@@ -48,6 +48,33 @@ export class AlbumsService {
 
         return album;
     }
+
+    async update(id: number, recordToUpdate: UpdateAlbumDTO): Promise<Album> {
+        const album = await this.albumRepository.findOne({ where: { id }, relations: ['songs'] });
+        if (!album) {
+            throw new Error('404: Album not found');
+        }
+    
+        album.title = recordToUpdate.title;
+    
+        if (recordToUpdate.songs && recordToUpdate.songs.length) {
+            const songs = await this.songRepository.findByIds(recordToUpdate.songs);
+            album.songs = songs;
+        }
+    
+        return this.albumRepository.save(album);
+    }
+
+    async delete(id: number): Promise<void> {
+        const album = await this.albumRepository.findOne({ where: { id } });
+        if (!album) {
+            throw new Error('404: Album not found');
+        }
+        await this.albumRepository.remove(album);
+    }
+    
+    
+
 
     async paginate(options: IPaginationOptions): Promise<Pagination<Album>> {
         const queryBuilder = this.albumRepository.createQueryBuilder('album');

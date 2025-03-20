@@ -12,6 +12,8 @@ import { User } from './users/users.entity';
 import { Artist } from './artist/artist.entity';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { AuthController } from './auth/auth.controller';
+import { JwtModule } from '@nestjs/jwt';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -31,7 +33,8 @@ const proConfig = { port: 400};
     ),
     SongsModule,
     AuthModule,
-    UsersModule
+    UsersModule,
+    JwtModule.register({secret: 'strongpassword'})
   ],
   controllers: [AppController],
   providers: [
@@ -54,9 +57,9 @@ export class AppModule implements NestModule{
     console.log('dbname', dataSource.driver.database);
   }
   configure(consumer: MiddlewareConsumer) {
-    // consumer.apply(LoggerMiddleware).forRoutes('songs') //option num 1
-    // consumer.apply(LoggerMiddleware).forRoutes({path: 'songs', method: RequestMethod.POST}) // option num 2
-
     consumer.apply(LoggerMiddleware).forRoutes(SongsController)
+    // consumer.apply(LoggerMiddleware).forRoutes(AuthController)
+
+    consumer.apply(LoggerMiddleware).forRoutes({ path: 'auth', method: RequestMethod.GET})
   }
 }

@@ -1,79 +1,73 @@
-# // sign up
-# POST http://localhost:3000/auth/signup
-# Content-Type: application/json
-
-# {
-#     "firstName": "ronaldo",
-#     "lastName": "cristiano",
-#     "email": "cr9@gmail.com",
-#     "password": "12312345"
-# }
-
-
-# ### TEST
-# POST http://localhost:3000
-# ### GET ALL SONGS
-# GET http://localhost:3000/songs
-
-
-
-
-# ### GET ALL SONGS PAGINATION
-# GET http://localhost:3000/songs/?page=2
-
-# ### GET ALL SONGS PAGINATION
-# GET http://localhost:3000/songs/?page=1&limit=3
-
-
-
-
-
-
-
-
-
-# ### GET SONG BY ID
-# GET http://localhost:3000/songs/3
-
-# ### POST SONG
-# POST http://localhost:3000/songs
-# Content-Type: application/json
-
-# {
-#     "title": "RG11",
-#     "artists": [
-#         "asd'"
-#     ],
-#     "releasedDate": "2024-04-04",
-#     "duration": "02:34",
-#     "lyrics": "DSADASDDSA"
-# }
-
-
-# ### CHANGE SONG
-# PUT http://localhost:3000/songs/5
-# Content-Type: application/json
-
-# {
-#     "title": "CR7",
-#     "artists": [
-#         "CR7"
-#     ],
-#     "releasedDate": "2024-04-04",
-#     "duration": "02:34",
-#     "lyrics": "DSADASDDSA"
-# }
-# ### DELETE SONG
-# DELETE http://localhost:3000/songs/2
-
-
-
-
 // sign up
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "cr9@gmail.com",
+    "firstName": "ronaldo",
+    "lastName": "cristiano",
+    "email": "cr12@gmail.com",
     "password": "12312345"
 }
+
+
+### profile
+GET http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyMTJAZ21haWwuY29tIiwic3ViIjoxNSwiaWF0IjoxNzQyMzkwNDUxLCJleHAiOjE3NDI0NzY4NTF9.Bn5aDPllTW-00GAwC-pqhmmg7Px6Bs5QTnCA5BfKSNE
+
+### TEST
+POST http://localhost:3000
+### GET ALL SONGS
+GET http://localhost:3000/songs
+
+
+
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=2
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=1&limit=3
+
+
+
+
+
+
+
+
+
+### GET SONG BY ID
+GET http://localhost:3000/songs/3
+
+### POST SONG
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title": "RG11",
+    "artists": [
+        "asd'"
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": "DSADASDDSA"
+}
+
+
+### CHANGE SONG
+PUT http://localhost:3000/songs/5
+Content-Type: application/json
+
+{
+    "title": "CR7",
+    "artists": [
+        "CR7"
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": "DSADASDDSA"
+}
+### DELETE SONG
+DELETE http://localhost:3000/songs/2
+
+

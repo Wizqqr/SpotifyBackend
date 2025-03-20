@@ -5,12 +5,14 @@ import * as bcrypt from 'bcrypt';
 import { User } from './users.entity';
 import { CreateUserDTO } from './dto/create-user-dto';
 import { LoginDTO } from '../auth/dto/login.dto';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class UsersService {
     constructor(
         @InjectRepository(User)
         private userRepository: Repository<User>,
+        private jwtService: JwtService,
     ) {}
 
     async create(userDTO: CreateUserDTO): Promise<User> {
@@ -22,9 +24,6 @@ export class UsersService {
 
         return user;
     }
-
-
-
     async findOne(data: Partial<User>): Promise<User> {
         const user = await this.userRepository.findOneBy({ email: data.email });
         if (!user) {
@@ -33,20 +32,4 @@ export class UsersService {
         return user;
     }
 
-    async login(loginDTO: LoginDTO): Promise<User> {
-        const user = await this.findOne({ email: loginDTO.email });
-        if (!user) {
-            throw new UnauthorizedException('User not found');
-        }
-
-        const passwordMatched = await bcrypt.compare(loginDTO.password, user.password);
-        if (!passwordMatched) {
-            throw new UnauthorizedException('Password does not match');
-        }else{
-            console.log('success')
-        }
-
-        delete (user as any).password;
-        return user;
-    }
 }

@@ -33,7 +33,7 @@ export class SongsService {
     }
 
     async findAll() : Promise<Song[]> {
-        const songs = await this.songsRepository.find();
+        const songs = await this.songsRepository.find();    
         if(!songs){
             throw new Error(`Songs not found`)
         }

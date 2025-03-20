@@ -17,4 +17,7 @@ export class Artist {
 
     @ManyToMany(() => Song, (song) => song.artists)
     songs: Song[]
+
+    
+
 }

@@ -14,6 +14,9 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { AuthController } from './auth/auth.controller';
 import { JwtModule } from '@nestjs/jwt';
+import { authConstants } from './common/constants/auth.constants';
+import { AlbumsModule } from './albums/albums.module';
+import { Album } from './albums/album.entity';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -27,14 +30,15 @@ const proConfig = { port: 400};
         port: 5432,
         username: 'postgres',
         password: 'Aziret7bklass',
-        entities: [Song, User, Artist],
+        entities: [Song, User, Artist, Album],
         synchronize: true,
       }
     ),
     SongsModule,
     AuthModule,
     UsersModule,
-    JwtModule.register({secret: 'strongpassword'})
+    JwtModule.register({secret: authConstants.secret}),
+    AlbumsModule
   ],
   controllers: [AppController],
   providers: [

@@ -3,9 +3,32 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "cr12@gmail.com",
+    "email": "cr7@gmail.com",
     "password": "12312345"
 }
 
 
+### profile
+GET http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyN0BnbWFpbC5jb20iLCJzdWIiOjEwLCJpYXQiOjE3NDI0NDQ4OTAsImV4cCI6MTc0MjUzMTI5MH0.ABl-IzIQkFRG2g4-160fzekNlrhAoj-9UztYQXyQz9c
 
+
+### album create
+POST http://localhost:3000/albums
+Content-Type: application/json
+
+{
+    "title": "album8",
+    "songs": [
+        3,
+        1,
+        2
+    ]
+}
+
+### get album by id
+GET http://localhost:3000/albums/3
+
+
+### get albums
+GET http://localhost:3000/albums

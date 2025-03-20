@@ -17,7 +17,7 @@ export class Song {
     duration: Date;
 
     @Column('text')
-    lyrics: string;
+    lyrics: boolean;
 
     @ManyToMany(() => Artist, (artist) => artist.songs, { cascade: true })
     @JoinTable({ name: 'songs_artists' })

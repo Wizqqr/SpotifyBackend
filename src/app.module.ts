@@ -17,6 +17,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { authConstants } from './common/constants/auth.constants';
 import { AlbumsModule } from './albums/albums.module';
 import { Album } from './albums/album.entity';
+import { DatabaseService } from './database/database.service';
+import { DatabaseController } from './database/database.controller';
+import { DatabaseModule } from './database/database.module';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -38,9 +41,10 @@ const proConfig = { port: 400};
     AuthModule,
     UsersModule,
     JwtModule.register({secret: authConstants.secret}),
-    AlbumsModule
+    AlbumsModule,
+    DatabaseModule
   ],
-  controllers: [AppController],
+  controllers: [AppController, DatabaseController],
   providers: [
     AppService, 
     {
@@ -52,9 +56,11 @@ const proConfig = { port: 400};
       useFactory: () => {
         return process.env.NODE_ENV === 'development' ? devConfig : proConfig;
       }
-    }
+    },
+    DatabaseService
     
  ],
+ exports: [DatabaseService]
 })
 export class AppModule implements NestModule{
   constructor(private dataSource: DataSource){

@@ -1,50 +1,24 @@
-// LOGIN
+### LOGIN
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "cr7@gmail.com",
+    "email": "cr12@gmail.com",
+    "password": "12312345"
+}
+
+### sign up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "firstName": "ronaldo",
+    "lastName": "cristiano",
+    "email": "cr12@gmail.com",
     "password": "12312345"
 }
 
 
 ### profile
 GET http://localhost:3000/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyN0BnbWFpbC5jb20iLCJzdWIiOjEwLCJpYXQiOjE3NDI0NDQ4OTAsImV4cCI6MTc0MjUzMTI5MH0.ABl-IzIQkFRG2g4-160fzekNlrhAoj-9UztYQXyQz9c
-
-
-### album create
-POST http://localhost:3000/albums
-Content-Type: application/json
-
-{
-    "title": "album8",
-    "songs": [
-        3,
-        1,
-        2
-    ]
-}
-
-### get album by id
-GET http://localhost:3000/albums/3
-
-
-### get albums
-GET http://localhost:3000/albums
-
-
-### change album
-PUT http://localhost:3000/albums/6
-Content-Type: application/json
-
-{
-    "title": "cr7isthebest",
-    "songs":[
-        0
-    ]
-}
-
-
-### delete album
-DELETE http://localhost:3000/albums/7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyMTJAZ21haWwuY29tIiwic3ViIjoxOSwiaWF0IjoxNzQyNDc1NDA2LCJleHAiOjE3NDI1NjE4MDZ9.JqcKJDFEk3Ki_UxG_H_NzVexYHIpEn5AFJdM3hYtigQ

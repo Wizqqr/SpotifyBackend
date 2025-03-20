@@ -1,10 +1,12 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { DevConfigService } from './common/providers/DevConfigService';
+import { DatabaseService } from './database/database.service';
 
 @Injectable()
 export class AppService {
   constructor(
     private devConfigService: DevConfigService,
+    private dbService: DatabaseService,
     @Inject('CONFIG')
     private config: { port: string},
   ){}
@@ -17,4 +19,5 @@ export class AppService {
     this.users.push(user)
     return this.users
   }
+
 }

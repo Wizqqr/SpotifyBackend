@@ -24,4 +24,5 @@ export class AppController {
   postSomething(){
     return this.appService.postSomething('asd');
   }
+  
 }

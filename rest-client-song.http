@@ -1,0 +1,45 @@
+### GET ALL SONGS
+GET http://localhost:3000/songs
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=2
+
+### GET ALL SONGS PAGINATION
+GET http://localhost:3000/songs/?page=1&limit=3
+
+
+### GET SONG BY ID
+GET http://localhost:3000/songs/3
+
+### POST SONG
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title": "RG11",
+    "artists": [
+        1,2
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": true
+}
+
+
+### CHANGE SONG
+PUT http://localhost:3000/songs/5
+Content-Type: application/json
+
+{
+    "title": "CR7",
+    "artists": [
+        "CR7"
+    ],
+    "releasedDate": "2024-04-04",
+    "duration": "02:34",
+    "lyrics": "DSADASDDSA"
+}
+### DELETE SONG
+DELETE http://localhost:3000/songs/2
+
+

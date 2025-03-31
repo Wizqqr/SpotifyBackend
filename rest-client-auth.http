@@ -3,22 +3,139 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "cr12@gmail.com",
-    "password": "12312345"
+    "email": "edsheeran@example.com",
+    "password": "password456"
 }
 
 ### sign up
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
-{
-    "firstName": "ronaldo",
-    "lastName": "cristiano",
-    "email": "cr12@gmail.com",
-    "password": "12312345"
-}
+[
+    {
+        "firstName": "ronaldo",
+        "lastName": "cristiano",
+        "email": "cr12@gmail.com",
+        "password": "12312345"
+    },
+    {
+        "firstName": "lionel",
+        "lastName": "messi",
+        "email": "lm10@gmail.com",
+        "password": "password123"
+    },
+    {
+        "firstName": "neymar",
+        "lastName": "jr",
+        "email": "njr10@gmail.com",
+        "password": "qwerty123"
+    },
+    {
+        "firstName": "kylian",
+        "lastName": "mbappe",
+        "email": "km7@gmail.com",
+        "password": "mbappe2024"
+    },
+    {
+        "firstName": "mohamed",
+        "lastName": "salah",
+        "email": "ms11@gmail.com",
+        "password": "salahking"
+    },
+    {
+        "firstName": "kevin",
+        "lastName": "debruyne",
+        "email": "kd17@gmail.com",
+        "password": "manchester"
+    },
+    {
+        "firstName": "erling",
+        "lastName": "haaland",
+        "email": "eh9@gmail.com",
+        "password": "haaland123"
+    },
+    {
+        "firstName": "robert",
+        "lastName": "lewandowski",
+        "email": "rl9@gmail.com",
+        "password": "bayern2024"
+    },
+    {
+        "firstName": "luka",
+        "lastName": "modric",
+        "email": "lm10real@gmail.com",
+        "password": "modric2024"
+    },
+    {
+        "firstName": "karim",
+        "lastName": "benzema",
+        "email": "kb9@gmail.com",
+        "password": "benz2024"
+    },
+    {
+        "firstName": "antoine",
+        "lastName": "griezmann",
+        "email": "ag7@gmail.com",
+        "password": "griezmann"
+    },
+    {
+        "firstName": "paul",
+        "lastName": "pogba",
+        "email": "pp6@gmail.com",
+        "password": "pogba2024"
+    },
+    {
+        "firstName": "harry",
+        "lastName": "kane",
+        "email": "hk10@gmail.com",
+        "password": "spurs2024"
+    },
+    {
+        "firstName": "marcus",
+        "lastName": "rashford",
+        "email": "mr10@gmail.com",
+        "password": "united123"
+    },
+    {
+        "firstName": "sergio",
+        "lastName": "ramos",
+        "email": "sr4@gmail.com",
+        "password": "ramos2024"
+    },
+    {
+        "firstName": "andres",
+        "lastName": "iniesta",
+        "email": "ai8@gmail.com",
+        "password": "barca2024"
+    },
+    {
+        "firstName": "gerard",
+        "lastName": "pique",
+        "email": "gp3@gmail.com",
+        "password": "defender"
+    },
+    {
+        "firstName": "xavi",
+        "lastName": "hernandez",
+        "email": "xh6@gmail.com",
+        "password": "xavi2024"
+    },
+    {
+        "firstName": "ikay",
+        "lastName": "gundogan",
+        "email": "ig8@gmail.com",
+        "password": "cityzen"
+    },
+    {
+        "firstName": "jude",
+        "lastName": "bellingham",
+        "email": "jb22@gmail.com",
+        "password": "realmadrid"
+    }
+]
+
 
 
 ### profile
 GET http://localhost:3000/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyMTJAZ21haWwuY29tIiwic3ViIjoxOSwiaWF0IjoxNzQyNDc1NDA2LCJleHAiOjE3NDI1NjE4MDZ9.JqcKJDFEk3Ki_UxG_H_NzVexYHIpEn5AFJdM3hYtigQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkc2hlZXJhbkBleGFtcGxlLmNvbSIsInN1YiI6MSwiaWF0IjoxNzQyNTU1NTExLCJleHAiOjE3NDI2NDE5MTF9.rBkM41sFFxb6_HpHJ8umd9JqIttjI917ZBmhktYw_2Q

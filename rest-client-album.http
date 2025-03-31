@@ -4,11 +4,12 @@ POST http://localhost:3000/albums
 Content-Type: application/json
 
 {
-    "title": "album8",
+    "title": "AdeleAlbum",
     "songs": [
-        3,
         1,
-        2
+        2,
+        3,
+        4
     ]
 }
 

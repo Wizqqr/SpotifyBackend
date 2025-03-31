@@ -1,0 +1,114 @@
+### artist create
+POST http://localhost:3000/artist
+Content-Type: application/json
+
+[
+    {
+        "name": "Morgenshtern",
+        "userId": 19,
+        "songIds": [1, 2]
+    },
+    {
+        "name": "Billie Eilish",
+        "userId": 20,
+        "songIds": [3, 4]
+    },
+    {
+        "name": "Drake",
+        "userId": 21,
+        "songIds": [5, 6]
+    },
+    {
+        "name": "The Weeknd",
+        "userId": 22,
+        "songIds": [7, 8]
+    },
+    {
+        "name": "Post Malone",
+        "userId": 23,
+        "songIds": [9, 10]
+    },
+    {
+        "name": "Eminem",
+        "userId": 24,
+        "songIds": [11, 12]
+    },
+    {
+        "name": "Ariana Grande",
+        "userId": 25,
+        "songIds": [13, 14]
+    },
+    {
+        "name": "Kanye West",
+        "userId": 26,
+        "songIds": [15, 16]
+    },
+    {
+        "name": "Dua Lipa",
+        "userId": 27,
+        "songIds": [17, 18]
+    },
+    {
+        "name": "Travis Scott",
+        "userId": 28,
+        "songIds": [19, 20]
+    },
+    {
+        "name": "Ed Sheeran",
+        "userId": 29,
+        "songIds": [1, 3]
+    },
+    {
+        "name": "Taylor Swift",
+        "userId": 30,
+        "songIds": [4, 6]
+    },
+    {
+        "name": "Rihanna",
+        "userId": 31,
+        "songIds": [7, 9]
+    },
+    {
+        "name": "Lil Nas X",
+        "userId": 32,
+        "songIds": [10, 12]
+    },
+    {
+        "name": "Doja Cat",
+        "userId": 33,
+        "songIds": [13, 15]
+    },
+    {
+        "name": "Shawn Mendes",
+        "userId": 34,
+        "songIds": [16, 18]
+    },
+    {
+        "name": "Olivia Rodrigo",
+        "userId": 35,
+        "songIds": [19, 1]
+    },
+    {
+        "name": "Harry Styles",
+        "userId": 36,
+        "songIds": [2, 4]
+    },
+    {
+        "name": "Bad Bunny",
+        "userId": 37,
+        "songIds": [5, 8]
+    },
+    {
+        "name": "Justin Bieber",
+        "userId": 38,
+        "songIds": [9, 11]
+    }
+]
+
+
+
+### get all artists
+GET http://localhost:3000/artist
+
+### get all artists with pagination
+GET http://localhost:3000/artist/?page=2&limit=3

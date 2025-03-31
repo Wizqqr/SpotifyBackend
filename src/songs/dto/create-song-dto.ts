@@ -20,5 +20,5 @@ export class CreateSongDTO {
     
     @IsString()
     @IsOptional( )
-    readonly lyrics: boolean;
+    readonly lyrics: string;
 }

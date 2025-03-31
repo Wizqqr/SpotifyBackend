@@ -20,6 +20,7 @@ import { Album } from './albums/album.entity';
 import { DatabaseService } from './database/database.service';
 import { DatabaseController } from './database/database.controller';
 import { DatabaseModule } from './database/database.module';
+import { ArtistModule } from './artist/artist.module';
 
 const devConfig = { port: 3000};
 const proConfig = { port: 400};
@@ -28,7 +29,7 @@ const proConfig = { port: 400};
     TypeOrmModule.forRoot(
       {
         type: 'postgres',
-        database: 'spotifynestjs01',
+        database: 'Spotify',
         host: 'localhost',
         port: 5432,
         username: 'postgres',
@@ -42,7 +43,8 @@ const proConfig = { port: 400};
     UsersModule,
     JwtModule.register({secret: authConstants.secret}),
     AlbumsModule,
-    DatabaseModule
+    DatabaseModule,
+    ArtistModule
   ],
   controllers: [AppController, DatabaseController],
   providers: [

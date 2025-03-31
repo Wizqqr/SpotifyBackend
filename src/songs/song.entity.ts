@@ -17,13 +17,13 @@ export class Song {
     duration: Date;
 
     @Column('text')
-    lyrics: boolean;
+    lyrics: string;
 
     @ManyToMany(() => Artist, (artist) => artist.songs, { cascade: true })
     @JoinTable({ name: 'songs_artists' })
     artists: Artist[];
 
     @ManyToMany(() => Album, (album) => album.songs)
-    @JoinTable({ name: 'songs_albums' })  // таблица для связи песен и альбомов
+    @JoinTable({ name: 'songs_albums' })  
     albums: Album[];
 }

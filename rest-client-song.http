@@ -15,15 +15,149 @@ GET http://localhost:3000/songs/3
 POST http://localhost:3000/songs
 Content-Type: application/json
 
-{
-    "title": "RG11",
-    "artists": [
-        1,2
-    ],
-    "releasedDate": "2024-04-04",
-    "duration": "02:34",
-    "lyrics": true
-}
+[
+    {
+        "title": "RG11",
+        "artists": [1, 2],
+        "releasedDate": "2024-04-04",
+        "duration": "02:34",
+        "lyrics": true
+    },
+    {
+        "title": "Skyline",
+        "artists": [3],
+        "releasedDate": "2023-12-15",
+        "duration": "03:45",
+        "lyrics": false
+    },
+    {
+        "title": "Ocean Wave",
+        "artists": [4, 5],
+        "releasedDate": "2022-08-21",
+        "duration": "04:12",
+        "lyrics": true
+    },
+    {
+        "title": "Night Drive",
+        "artists": [2],
+        "releasedDate": "2021-11-03",
+        "duration": "03:22",
+        "lyrics": false
+    },
+    {
+        "title": "Golden Hour",
+        "artists": [1, 6],
+        "releasedDate": "2024-01-10",
+        "duration": "04:45",
+        "lyrics": true
+    },
+    {
+        "title": "Starlight",
+        "artists": [7],
+        "releasedDate": "2023-06-18",
+        "duration": "03:30",
+        "lyrics": true
+    },
+    {
+        "title": "Firestorm",
+        "artists": [8, 9],
+        "releasedDate": "2020-02-14",
+        "duration": "02:50",
+        "lyrics": false
+    },
+    {
+        "title": "Echoes",
+        "artists": [3, 10],
+        "releasedDate": "2022-09-30",
+        "duration": "04:05",
+        "lyrics": true
+    },
+    {
+        "title": "Neon Lights",
+        "artists": [11],
+        "releasedDate": "2024-05-22",
+        "duration": "03:40",
+        "lyrics": false
+    },
+    {
+        "title": "Blue Horizon",
+        "artists": [12, 13],
+        "releasedDate": "2023-07-14",
+        "duration": "03:55",
+        "lyrics": true
+    },
+    {
+        "title": "Silver Sky",
+        "artists": [14],
+        "releasedDate": "2021-04-23",
+        "duration": "04:20",
+        "lyrics": true
+    },
+    {
+        "title": "Electric Dreams",
+        "artists": [2, 5],
+        "releasedDate": "2020-12-01",
+        "duration": "03:10",
+        "lyrics": false
+    },
+    {
+        "title": "Aurora",
+        "artists": [6, 15],
+        "releasedDate": "2024-02-14",
+        "duration": "03:25",
+        "lyrics": true
+    },
+    {
+        "title": "Shadow Dance",
+        "artists": [9],
+        "releasedDate": "2022-11-11",
+        "duration": "02:45",
+        "lyrics": false
+    },
+    {
+        "title": "Moonrise",
+        "artists": [10, 16],
+        "releasedDate": "2023-03-03",
+        "duration": "04:00",
+        "lyrics": true
+    },
+    {
+        "title": "Velvet Sky",
+        "artists": [17],
+        "releasedDate": "2021-10-05",
+        "duration": "03:35",
+        "lyrics": true
+    },
+    {
+        "title": "Crimson Tide",
+        "artists": [18, 4],
+        "releasedDate": "2020-06-12",
+        "duration": "03:50",
+        "lyrics": false
+    },
+    {
+        "title": "Starfall",
+        "artists": [19],
+        "releasedDate": "2024-07-07",
+        "duration": "03:15",
+        "lyrics": true
+    },
+    {
+        "title": "Silent Echo",
+        "artists": [20],
+        "releasedDate": "2023-09-19",
+        "duration": "03:05",
+        "lyrics": false
+    },
+    {
+        "title": "Infinite Dreams",
+        "artists": [1, 3],
+        "releasedDate": "2022-12-24",
+        "duration": "04:30",
+        "lyrics": true
+    }
+]
+
 
 
 ### CHANGE SONG
